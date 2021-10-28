@@ -1,9 +1,9 @@
 # Describe VMs
 MACHINES = {
   # VM name "kernel update"
-  :"kernel-update" => {
+  :"otus-test" => {
               # VM box
-              :box_name => "centos-7-5",
+              :box_name => "vedoff/centos-7-5",
               # VM CPU count
               :cpus => 2,
               # VM RAM size (Mb)
