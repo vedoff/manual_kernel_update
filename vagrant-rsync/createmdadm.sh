@@ -1,8 +1,7 @@
 #!/bin/bash
 sudo yum install mdadm -y
 #sudo wipefs --all --force /dev/sd{b,c,d,e}
-#sudo mdadm --create --verbose /dev/md0 -l 10 -n r 4 /dev/sd{b,c,d,e}
-mdadm --create --verbose /dev/md0 --level=10 --raid-devices=4 /dev/sd{b,c,d,e}
+sudo mdadm --create --verbose /dev/md0 --level=10 --raid-devices=4 /dev/sd{b,c,d,e}
 sudo mdadm --detail --scan >> /etc/mdadm/mdadm.conf
 sudo systemctl restart mdmonitor
 sudo mdadm -D /dev/md0
