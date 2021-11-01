@@ -21,3 +21,5 @@ sudo parted -a opt /dev/md0 mkpart data05 ext4 80% 100% && sudo mkfs.ext4 -L dat
 sudo echo "LABEL=data05 /data-05 ext4 defaults 0 0" >> /etc/fstab
 sudo mount -a
 sudo chmod o-w /etc/fstab
+sudo mdadm -D /dev/md0
+df -h
